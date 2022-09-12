@@ -1,0 +1,591 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 45px;
+}
+
+/*Ripple*/
+.ripple {
+    background-color: purple;
+    color: #fff;
+    border: 1px purple solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+.ripple:focus {
+    outline: none;
+}
+
+.ripple .circle {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale .5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+/*Ripple*/
+
+/*BoxShadow*/
+
+.dugme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 220px;
+    height: 60px;
+
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000000;
+    transition: all 0.3s;
+    position: relative;
+
+    text-align: center;
+    overflow: hidden;
+
+    transition: all 0.5s;
+
+    border-radius: 5px;
+    box-shadow: 0 6px 30px -10px rgba(#CCCCCC, 1);
+}
+
+.dugme:hover {
+    transform: translateX(5px) translateY(-7px);
+    box-shadow: 9px 11px 0px -1px purple;
+
+}
+
+/*BoxShadow*/
+
+/* Social network/popup */
+
+.social-net {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s ease;
+
+
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-net i {
+    color: black;
+    font-size: 20px;
+}
+
+.social-net:hover i {
+    color: white;
+}
+
+.social-net:hover {
+    background-color: #1877F2;
+    transform: translateY(3px);
+
+
+}
+
+.social-net span {
+    position: absolute;
+    transform: translateY(-20px);
+    background: #1877F2;
+    color: #ffffff;
+    padding: 7px;
+    border-radius: 7px;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+}
+
+.social-net:hover span {
+    transform: translateY(-45px);
+    visibility: visible;
+}
+
+.social-net span::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #1877F2;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+
+
+}
+
+/* Social network/popup */
+
+
+
+/* Social network/instg */
+.social-net-ig {
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+
+
+
+}
+
+.social-net-ig i {
+    font-size: 30px;
+    z-index: 100;
+}
+
+.social-net-ig::after {
+    content: "";
+    position: absolute;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transform: scale(0);
+
+    transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+
+.social-net-ig:hover::after {
+    transform: scale(1);
+    background: pink;
+}
+
+/* Social network/instg */
+/* boxshadow */
+.full-box-shadow {
+    border: 2px solid black;
+    outline: none;
+    padding: 10px 8px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 5px 5px 0 black,
+        -5px -5px 0 black,
+        -5px 5px 0 black,
+        5px -5px 0 black;
+    transition: 500ms ease-in-out;
+}
+
+.full-box-shadow:hover {
+    box-shadow: 20px 5px 0 black, -20px -5px 0 black;
+}
+
+/* boxshadow */
+/*  */
+.button_hover {
+    position: relative;
+    background-color: rgba(238, 78, 78, 0.993);
+    border: none;
+    width: 180px;
+    height: 60px;
+    border-radius: 60px;
+    color: white;
+    overflow: hidden;
+    z-index: 100;
+    left: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.button_hover div,
+.button_hover span {
+    position: absolute;
+}
+
+.button_hover div {
+    right: 6rem;
+}
+
+.button_hover span {
+    right: 4rem;
+    transition: all .5s ease;
+}
+
+/* .button_hover:hover span {
+    background-color: red;
+    transform: translateX(30%);
+    width: 100%;
+} */
+
+.button_hover::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    border-radius: 60px;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    transition: all .5s ease;
+
+}
+
+.button_hover:hover span {
+    right: 1.5rem;
+}
+
+
+.button_hover:hover::after {
+    transform: translateX(65%);
+}
+
+/*Button-shadow*/
+.button-shadow {
+    width: 130px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid #000;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.button-shadow::before,
+.button-shadow::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    border: 2px solid;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.button-shadow::before {
+    top: 1px;
+    left: 1px;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #000;
+    border-left-color: #000;
+}
+
+.button-shadow::after {
+    bottom: 1px;
+    right: 1px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #000;
+    border-right-color: #000;
+}
+
+.button-shadow:hover::before,
+.button-shadow:hover::after {
+    border-color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+/*PLAY*/
+
+.play {
+    border: 2px solid red;
+    background: transparent;
+    color: red;
+    width: 140px;
+    padding: 8px;
+    position: relative;
+
+    /* z-index: 100; */
+}
+
+.play:hover {
+    z-index: 100;
+    color: #fff;
+}
+
+.play::after {
+    content: "";
+    background: red;
+    clip-path: polygon(0 0, 54% 0, 4% 100%, 0 100%);
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0px;
+    top: 0;
+    transition: all .5s ease-out;
+
+    z-index: -10;
+}
+
+.play:hover::after {
+    width: 100%;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.play .one,
+.play .two {
+    position: absolute;
+    background-color: #000;
+    width: 130%;
+    height: 2px;
+}
+
+
+.play .one {
+    top: 39px;
+    left: -15px;
+}
+
+.play .two {
+    top: -10px;
+    left: -15px;
+}
+
+.play .three,
+.play .four {
+    position: absolute;
+    background-color: #000;
+    width: 15%;
+    height: 2px;
+    transform: rotate(90deg);
+    left: -26px;
+}
+
+.three {
+    top: -0.6px;
+}
+
+.four {
+    top: 30px;
+}
+
+.play .five,
+.play .six {
+    position: absolute;
+    background-color: #000;
+    width: 15%;
+    height: 2px;
+    transform: rotate(90deg);
+    left: 151px;
+}
+
+.five {
+    top: 29.4px;
+}
+
+.six {
+    top: 0px;
+}
+
+/*Button with spans*/
+
+/*Button with hover icon*/
+
+.button-icon {
+    background: purple;
+    border: none;
+    border-radius: 3px;
+    width: auto;
+    padding: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    transition: all 0.5s ease-in;
+}
+
+.button-icon:hover {
+    transform: scaleX(1.2);
+    background: rgb(211, 48, 211);
+    box-shadow: 0px 6px 15px rgb(211, 48, 211);
+    letter-spacing: 1px;
+}
+
+.button-icon div {
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    height: 12px;
+    width: 12px;
+    transform: rotate(-45deg);
+    opacity: 0;
+
+    transition: all 0.5s ease-in;
+}
+
+.button-icon:hover div {
+    opacity: 1;
+}
+
+
+
+
+
+/*spans rotating*/
+
+.spans {
+    width: 200px;
+    height: 70px;
+    background: linear-gradient(to left top, #c32c71 50%, #b33771 50%);
+    border-style: none;
+    color: #fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-family: 'Lato';
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+}
+
+.spans span {
+    position: absolute;
+    display: block;
+}
+
+.spans span:nth-child(1) {
+    height: 3px;
+    width: 200px;
+    top: 0px;
+    left: -200px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span1 {
+    0% {
+        left: -200px
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+.spans span:nth-child(2) {
+    height: 70px;
+    width: 3px;
+    top: -70px;
+    right: 0px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f6e58d);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes span2 {
+    0% {
+        top: -70px;
+    }
+
+    100% {
+        top: 70px;
+    }
+}
+
+.spans span:nth-child(3) {
+    height: 3px;
+    width: 200px;
+    right: -200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes span3 {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 200px;
+    }
+}
+
+.spans span:nth-child(4) {
+    height: 70px;
+    width: 3px;
+    bottom: -70px;
+    left: 0px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes span4 {
+    0% {
+        bottom: -70px;
+    }
+
+    100% {
+        bottom: 70px;
+    }
+}
+
+.spans:hover {
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
+}
+
+.spans:hover span {
+    animation-play-state: paused;
+}
+
+/*ADD*/
